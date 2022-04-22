@@ -7,9 +7,7 @@ void readFromConsole(int *buffer)
 
   for (int idx = 0; idx <STREAM_LENGTH ; idx++)
     {
-      scanf ("%i", *buffer);	
-	  buffer++;
-  
+      scanf ("%i", &buffer[idx]);	
     }
 }
 
@@ -28,8 +26,9 @@ int getMinValue(int * buffer)
     return minValue;
 }
 
-{
+
 int getMaxValue(int * buffer)
+{
     int maxValue = MIN_VALUE;
 
     for (int idx = 0; idx < STREAM_LENGTH; idx++)
