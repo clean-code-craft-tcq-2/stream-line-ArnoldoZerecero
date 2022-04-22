@@ -41,3 +41,16 @@ int getMaxValue(int * buffer)
     }
     return maxValue;
 }
+
+float getAverageFromLastFiveStreamValues(int * buffer)
+{
+    float average = 0;
+
+    for (int idx = 0; idx < 5; idx++)
+    {
+        average += *(buffer + (STREAM_LENGTH - 5));
+        buffer++;
+    }
+    average = average/5;
+    return average;
+}
