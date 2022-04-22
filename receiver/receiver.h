@@ -8,4 +8,4 @@ int getMinValue(int*);
 
 int getMaxValue(int*);
 
-int getAverageFromLastFiveStreamValues(int*);
+float getAverageFromLastFiveStreamValues(int*);
