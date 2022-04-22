@@ -29,7 +29,6 @@ TEST_CASE("Test reading the stream of values from console")
 }
 
 
-
 TEST_CASE("Get minimum and maximum values for each parameter")
 {
     printf("Current MIN value - %i\n", getMinValue(&ampDataStream[0]));
@@ -37,4 +36,11 @@ TEST_CASE("Get minimum and maximum values for each parameter")
     printf("SOC MIN value - %i\n", getMinValue(&stateOfChargeDataStream[0]));
     printf("SOC MAX value - %i\n", getMaxValue(&stateOfChargeDataStream[0]));
 }
+
+TEST_CASE("Get simple moving average (last 5 values) for each parameter")
+{
+    printf("Current moving average- %.2f\n", getAverageFromLastFiveStreamValues(&ampDataStream[0]));
+    printf("SOC moving average - %.2f\n", getAverageFromLastFiveStreamValues(&stateOfChargeDataStream[0]));
+}
+
 
